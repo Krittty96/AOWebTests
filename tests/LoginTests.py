@@ -21,8 +21,7 @@ def test_empty_login_and_password(browser):
 def test_login_and_not_password(browser):
     BasePage(browser).get_url(BASE_URL)
     LoginPage = LoginPageHelper(browser)
-    with allure.step('Вводим сгенерированный логин в поле "Телефон или адрес эл.почты"'):
-        LoginPage.enter_login(LoginPage.generator_random_login(8))
+    LoginPage.enter_login(LoginPage.generator_random_login(8))
     LoginPage.click_login()
     assert LoginPageHelper(browser).get_error_text() == ENPTY_PASSWORD_ERROR
 
