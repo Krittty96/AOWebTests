@@ -26,11 +26,6 @@ class LoginPageLocators:
     RESTORE_BUTTON = (By.XPATH,'//div[@class="RecoveryMain-module__root___ff337"]//a//span[@class="vkuiButton__content"]')
     CANCEL_BUTTON = (By.XPATH, '//div[@class="RecoveryMain-module__root___ff337"]//button')
 
-
-
-
-
-
     ERROR = (By.XPATH,
              '//*[@class="LoginForm-module__error___1xmAD vkuiCaption__sizeYNone vkuiCaption__level1 vkuiTypography__host vkuiTypography__normalize vkuiRootComponent__host"]')
 
@@ -90,3 +85,8 @@ class LoginPageHelper(BasePage):
     def click_recovery (self):
         self.attach_screenshot()
         self.find_element(LoginPageLocators.RESTORE_BUTTON).click()
+
+    @allure.step("Переходим к регистрации аккаунта")
+    def click_registration (self):
+        self.attach_screenshot()
+        self.find_element(LoginPageLocators.REGISTRATION_BUTTON).click()
