@@ -1,7 +1,7 @@
 
 import allure
 
-from pages.BasePage import BasePage
+from pages.BasePage import BasePageHelper
 from selenium.webdriver.common.by import By
 
 class RecoveryPageLocators:
@@ -11,7 +11,7 @@ class RecoveryPageLocators:
     SUPPORT_LINK = (By.XPATH,'//div[@class="support-link_item-text"]')
 
 
-class RecoveryPageHelper(BasePage):
+class RecoveryPageHelper(BasePageHelper):
     def __init__(self, driver):
         self.driver = driver
         self.check_page()
