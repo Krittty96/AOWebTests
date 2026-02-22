@@ -1,6 +1,6 @@
 import allure
 
-from pages.BasePage import BasePage
+from pages.BasePage import BasePageHelper
 from selenium.webdriver.common.by import By
 import random
 
@@ -15,7 +15,7 @@ class RegistrationPageLocators:
     PRIVACY_POLICY_LINK = (By.XPATH, '//a[@data-l="t,privacy"]')
 
 
-class RegistrationPageHelper(BasePage):
+class RegistrationPageHelper(BasePageHelper):
     def __init__(self, driver):
         self.driver = driver
         self.check_page()
