@@ -21,5 +21,5 @@ def test_open_vk_ecosystem(browser):
     LoginPage.switch_window(new_window_id)
     VKEcosystemPage = VKEcosystemPageHelper(browser)
     VKEcosystemPage.switch_window(current_window_id)
-    LoginPageHelper(browser)
+
 
