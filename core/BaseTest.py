@@ -1,8 +1,11 @@
 import pytest
 from selenium import webdriver
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def browser():
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_argument('--lang=ru')
+    driver = webdriver.Remote(command_executor='http://155.212.219.11:4444', options=options)
     yield driver
-    driver.quit()
+    if driver:
+        driver.quit()
