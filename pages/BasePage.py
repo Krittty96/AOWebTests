@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
-    LOGO_BUTTON = (By.XPATH, '//div[@class="toolbar_custom-logo_img-w __maslenitsa_2026_2"]')
+    LOGO_BUTTON = (By.XPATH, '//div[@class="toolbar_logo_img"]')
     ECOSYSTEM_BUTTON = (By.XPATH, '//span[@class="toolbar_nav_i_ic"]')
     MORE_BUTTON = (By.XPATH, '//a[@data-l="t,more"]')
 

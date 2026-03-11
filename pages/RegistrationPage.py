@@ -31,15 +31,15 @@ class RegistrationPageHelper(BasePageHelper):
         self.find_element(RegistrationPageLocators.PRIVACY_POLICY_LINK)
 
 
-@allure.step('Выбираем рандомную страну/регион')
-def select_random_country(self):
-    random_number = random.randint(0, 212)
-    self.find_element(RegistrationPageLocators.COUNTRY_LIST).click()
-    country_items = self.find_elements(RegistrationPageLocators.COUNTRIES_ITEM)
-    country_code = country_items[random_number].get_attribute('text')
-    country_items[random_number].click()
-    return country_code
+    @allure.step('Выбираем рандомную страну/регион')
+    def select_random_country(self):
+        random_number = random.randint(0, 212)
+        self.find_element(RegistrationPageLocators.COUNTRY_LIST).click()
+        country_items = self.find_elements(RegistrationPageLocators.COUNTRIES_ITEM)
+        country_code = country_items[random_number].get_attribute('text')
+        country_items[random_number].click()
+        return country_code
 
-@allure.step('Проверяем соответствие кода телефона выбранной страны ожидаемому')
-def get_phone_field_value(self):
-    return self.find_element(RegistrationPageLocators.NUMBER_PHONE).get_attribute("text")
+    @allure.step('Проверяем соответствие кода телефона выбранной страны ожидаемому')
+    def get_phone_field_value(self):
+        return self.find_element(RegistrationPageLocators.NUMBER_PHONE).get_attribute("text")
