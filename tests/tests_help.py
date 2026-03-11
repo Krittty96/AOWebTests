@@ -5,7 +5,7 @@ from pages.BasePage import BasePageHelper
 from pages.HelpPage  import HelpPageHelper , HelpPageLocators
 from pages.AdvertisementCabinetHelp import AdvertisementCabinetHelpHelper
 
-BASE_URL = 'https://ok.ru/help'
+BASE_URL = 'https://ok.ru/help/'
 
 @allure.suite('Проверка содержимого страницы "Помощь"')
 @allure.title('Проверка раздела "Рекламный кабинет"')
