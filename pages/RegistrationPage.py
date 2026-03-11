@@ -8,7 +8,7 @@ import random
 class RegistrationPageLocators:
     COUNTRY_LIST = (By.XPATH, '//div[@data-l="t,country"]')
     COUNTRIES_ITEM = (By.XPATH, '//div[@class="country-select_code"]')
-    NUMBER_PHONE = (By.XPATH, '//input[@id="field_phone"]')
+    NUMBER_PHONE = (By.XPATH, '//div[@data-l="t,phone"]')
     NEXT_BUTTON = (By.XPATH, '//input[@data-l="t,submit"]')
     SUPPORT_LINK = (By.XPATH, '//a[@data-l="t,support"]')
     REGULATIONS_LINK = (By.XPATH, '//a[@data-l="t,agreement"]')
